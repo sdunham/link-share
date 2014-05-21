@@ -1,0 +1,19 @@
+<head>
+  <title>link-share</title>
+</head>
+
+<body>
+  {{> link_list}}
+</body>
+
+<template name="link_list">
+  <h1>The links!</h1>
+  {{#each links}}
+    <p>{{link}} ({{date}}) <span class="remove" style="cursor:pointer;">X</span></p>
+  {{else}}
+  <p>No links yet!</p>
+  {{/each}}
+
+  <input type="text" id="new_link" name="new_link" />
+  <input type="submit" value="Add Link" id="add_button" />
+</template>
